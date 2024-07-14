@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+* {
+    font-family: 'Open sans'
+}
+
+$base-color: #2a2d36;
+$secondary-color: #0b0c10;
+$complimentary-color: #15161a;
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: $secondary-color;
+    color: white;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    width: 100vw;
+}
