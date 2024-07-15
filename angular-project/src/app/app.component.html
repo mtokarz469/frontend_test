@@ -15,17 +15,17 @@
             <h2>BLOK PIERWSZY</h2>
             <div>
                 <span>
-                    <input type="radio" name="text-choice" value="1" checked/>
+                    <input type="radio" name="text-choice" value="1" id="1" checked/>
                     <label for="1">Opcja pierwsza</label>
                 </span>
                 
                 <span>
-                    <input type="radio" name="text-choice" value="2"/>
+                    <input type="radio" name="text-choice" value="2" id="2"/>
                     <label for="2">Opcja pierwsza</label>
                 </span>
            
                 <span>
-                    <input type="radio" name="text-choice" value="random"/>
+                    <input type="radio" name="text-choice" value="random" id="random"/>
                     <label for="random">Opcja losowa</label>
                 </span>
                 
@@ -49,10 +49,25 @@
     
 </main>
 <footer>
+   
     <div class="css-logo-wrapper">
         <div class="css-logo-border"></div>
         <p class="css-logo">CSS <br>IS <br>AWESOME</p>
     </div>
-    <p class="nabthat-logo">nabthat</p>
-    <button (click)="toggleDisplayName()">POKAŻ</button>
+    <div class="nabthat-logo-wrapper">
+        <p class="nabthat-logo">nabthat</p>
+    </div>
+    <div class="list-wrapper">
+        <label for="fortnite">POKAŻ</label>
+        <input type="checkbox" id="fortnite"/>
+        <div class="sigma"></div>
+        <ul>
+            <li>
+                ZRESETUJ USTAWIENIA
+            </li>
+            <li (click)="toggleDisplayName()">
+                POKAŻ DANE OSOBOWE
+            </li>
+        </ul>  
+    </div>
 </footer>

@@ -50,6 +50,8 @@ header {
 
     .icon-wrapper:hover {
         background-color: #E78301;
+        
+        cursor:pointer;
     }
     
     div {
@@ -73,12 +75,15 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     padding: .5rem 3rem;
+    flex-grow: 1;
+    z-index: 2;
+    
 
     align-items: center;
     .css-logo-wrapper {
         font-size: 1.25rem;
         height: 6rem;
-        width: 5rem;
+        
         transition: .5s ease;
         opacity: .3;
 
@@ -99,6 +104,8 @@ footer {
 
 
         .css-logo-border:hover {
+            
+            cursor:pointer;
             border: 1px solid #E78301;
             animation: spin .5s linear;
         }
@@ -112,7 +119,8 @@ footer {
     }
 
     .nabthat-logo {
-        opacity: .3
+        opacity: .3;
+        text-align: center;
     }
 
     .nabthat-logo::before {
@@ -132,6 +140,97 @@ footer {
         content: "";
         transform: translateY(-250%);
         margin-left: 5px;
+    }
+
+    div {
+        width: 33%;
+    }
+
+    .list-wrapper {
+        // position: relative;
+        background-color: $complimentary-color;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-align: center;
+        label {
+            width: 20rem;
+            height: 3rem;
+            font-weight: bold;
+            background: transparent;
+            border: 1px solid #A3A8B5;
+            border-radius: 3px;
+            color: #A3A8B5;
+            font-size: 20px;
+            position: relative;
+            z-index: 6;
+        }
+
+        label#text {
+            width: 20rem;
+            height: 3rem;
+        }
+        label:hover {
+            
+            cursor:pointer;
+        }
+
+        label::after {
+            display: inline-block;
+            content: "‸";
+     
+        }
+
+        input {
+            display: none;
+        }
+
+        .sigma {
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            height: 100%;
+            background-color: $complimentary-color;
+        }
+
+        ul {
+            z-index: -1;
+            // display: none;
+            position: absolute;
+            width: 20rem;
+            height: 5rem; 
+            background-color: white;
+            list-style: none;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: start;
+            padding: 1rem;
+            font-size: 15px;
+            font-weight: bold;
+            top: 0;
+            transition: 1s ease;
+            transform: translateY(0%);
+
+        }
+
+        input:checked ~ ul {
+            // display: flex !important;
+            transform: translateY(-100%);
+
+        }
+
+        li:hover {
+            color: #E78301;
+            transition: .5s ease;
+            cursor:pointer;
+        }
+
+        li::before {
+            display: inline-block;
+            content: "‸";
+        }
     }
 }
 
@@ -185,22 +284,36 @@ main {
 
                 span {
                     margin-bottom: 2rem;
-
+                    font-size: 2rem;
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
+
                     input[type="radio"] {
                         appearance: none;
-                        
-                        border: 2px solid white;
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 10px;
-                        margin-right: 5px
+                        position: relative;
+                        border: 3px solid white;
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 1rem;
+                        margin-right: 1.5rem;
                     }
                     
+                    input[type="radio"]:checked::after {
+                        display: block;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        
+                        content: "";
+                        background-color: white;
+                        width: 1rem;
+                        height: 1rem;
                     
+                        border-radius: .5rem;
+                    }
         
 
                     input[type="radio"]:checked ~ label {
@@ -211,6 +324,57 @@ main {
             };
 
             
+        }
+
+        .section-mid {
+            div {
+
+                display: flex;
+                flex-direction: row;
+                justify-content:center;
+                gap: 2rem;
+                margin-top: 2rem;
+
+                button {
+                    height: 3rem;
+                    width: 10rem;
+                    background: transparent;
+                    color: gray;
+                    border: 1px solid gray;
+                    font-weight: bold;
+                    transition: .5s ease;
+                    position: relative;
+                    z-index: 1;
+
+                }
+
+                button:hover {
+                    color: white;
+                    border: 1px solid white;
+                    
+            cursor:pointer;
+                }
+
+                button::before {
+                    display: block;
+                    content: "";
+                    z-index: -1;
+                    background: linear-gradient(90deg, rgba(205,116,0,1) 0%, rgba(254,158,35,1) 53%, rgba(254,158,35,1) 100%);
+                    opacity: 0;
+                    width:100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    position: absolute;
+                    transition: .5s ease;
+
+                }
+
+                button:hover::before {
+                    opacity: 1;
+                }
+            }
+
         }
     }
     
