@@ -276,7 +276,7 @@ main {
         }
 
         .section-left {
-            div {
+            form {
                 display: flex;
                 flex-direction: column;
                 padding: 5rem;
@@ -352,7 +352,7 @@ main {
                     color: white;
                     border: 1px solid white;
                     
-            cursor:pointer;
+                    cursor:pointer;
                 }
 
                 button::before {
@@ -375,6 +375,12 @@ main {
                 }
             }
 
+        }
+
+        .section-right {
+            div {
+                margin-top: 2rem;
+            }
         }
     }
     

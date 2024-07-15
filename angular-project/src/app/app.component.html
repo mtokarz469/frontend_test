@@ -13,37 +13,39 @@
     <div class="section-container">
         <section class="section-left">
             <h2>BLOK PIERWSZY</h2>
-            <div>
+            <form [formGroup]="form">
                 <span>
-                    <input type="radio" name="text-choice" value="1" id="1" checked/>
-                    <label for="1">Opcja pierwsza</label>
+                    <input type="radio" formControlName="selected" value="0" id="0"/>
+                    <label for="0">Opcja pierwsza</label>
                 </span>
                 
                 <span>
-                    <input type="radio" name="text-choice" value="2" id="2"/>
-                    <label for="2">Opcja pierwsza</label>
+                    <input type="radio" formControlName="selected" value="1" id="1"/>
+                    <label for="1">Opcja druga</label>
                 </span>
-           
+            
                 <span>
-                    <input type="radio" name="text-choice" value="random" id="random"/>
+                    <input type="radio" formControlName="selected" value="random" id="random"/>
                     <label for="random">Opcja losowa</label>
                 </span>
-                
-
-            </div>
+            </form>
         </section>
         <section class="section-mid">
             <h2>BLOK DRUGI</h2>
 
             <div>
-                <button>ZASTĄP</button>
-                <button>DOKLEJ</button>
+                <button (click)="replace()">ZASTĄP</button>
+                <button (click)="stick()">DOKLEJ</button>
             </div>
             
         </section>
         <section class="section-right">
             <h2>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE BO TA NAZWA JEST BARDZO DŁUGA I SIĘ NIE ZMIEŚCI NA STRONCE ŁADNIE</h2>
-            <div></div>
+            <div>
+                <div *ngFor="let item of block_text">
+                    {{ item.value }}
+                </div>
+            </div>
         </section>
     </div>
     
