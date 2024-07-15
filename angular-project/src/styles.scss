@@ -1,20 +1,218 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 * {
-    font-family: 'Open sans'
+    font-family: 'Open sans';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 $base-color: #2a2d36;
 $secondary-color: #0b0c10;
 $complimentary-color: #15161a;
 
+body {
+    background-color: $base-color;
+}
+
 header {
-    position: fixed;
+    position: sticky;
     left: 0;
     top: 0;
     background-color: $secondary-color;
     color: white;
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100vw;
+    height: 10rem;
+    font-size: 3rem;
+    text-align:right;
+    padding: .5rem 3rem;
+
+    .icon-wrapper {
+        transition: .25s ease-out;
+        align-self: center;
+        background-color: #303030;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            filter: invert(1);
+            height: 70%;
+            margin: auto;
+        }
+
+    }
+
+    .icon-wrapper:hover {
+        background-color: #E78301;
+    }
+    
+    div {
+        align-self: center;
+    }
+   
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5rem;
+    background-color: $complimentary-color;
+    color: white;
+    height: 8rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: .5rem 3rem;
+
+    align-items: center;
+    .css-logo-wrapper {
+        font-size: 1.25rem;
+        height: 6rem;
+        width: 5rem;
+        transition: .5s ease;
+        opacity: .3;
+
+        @keyframes spin {
+            from { transform: rotate(0deg);
+            }
+            to { transform: rotate(180deg);
+            }
+          }
+          
+        .css-logo-border {
+            position: absolute;
+            border: 1px solid white;
+            height: 6rem;
+            width: 5rem;
+    
+        }
+
+
+        .css-logo-border:hover {
+            border: 1px solid #E78301;
+            animation: spin .5s linear;
+        }
+        .css-logo {
+            margin: 5px;
+        }
+    }
+
+    .css-logo-wrapper:hover {
+        opacity: 1;
+    }
+
+    .nabthat-logo {
+        opacity: .3
+    }
+
+    .nabthat-logo::before {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        border: 1px solid gray;
+        content: "";
+        transform: translateY(-250%);
+        margin-right: 5px;
+    }
+    .nabthat-logo::after {
+        display: inline-block;
+        position: relative;
+        width: 30px;
+        border: 1px solid gray;
+        content: "";
+        transform: translateY(-250%);
+        margin-left: 5px;
+    }
+}
+
+
+
+
+main {
+    background-color: $base-color;
+    width: 100vw;
+    margin-top: 10rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    margin-bottom: 10rem;
+
+    h1 {
+        font-weight: normal;
+        font-size: 3rem;
+        hr {
+            width: 80%;
+            margin: 15px auto;
+        }
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+        section {
+            width: 33vw;
+            align-items: center;
+            text-align: center;
+
+            h2 {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        .section-left {
+            div {
+                display: flex;
+                flex-direction: column;
+                padding: 5rem;
+                align-items: start;;
+
+                span {
+                    margin-bottom: 2rem;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    input[type="radio"] {
+                        appearance: none;
+                        
+                        border: 2px solid white;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 10px;
+                        margin-right: 5px
+                    }
+                    
+                    
+        
+
+                    input[type="radio"]:checked ~ label {
+                        font-weight: bold;
+                    }
+                }
+
+            };
+
+            
+        }
+    }
+    
+
 }

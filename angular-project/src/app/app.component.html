@@ -1,24 +1,58 @@
 <header>
+
+    <a href="/" class="icon-wrapper"><img src="https://img.icons8.com/?size=256&id=23028&format=png" class="html-icon"></a>
+
     <div>
         <p>Zadanie <b>rekrutacyjne</b></p>
-        <p>Jan Kowalski</p>
+        <p *ngIf="visible">{{name}}</p>
+        
     </div>
 </header>
 <main>
-    <h1> Nagłówek H1 </h1>
+    <h1> Nagłówek H1 <hr></h1>
+    <div class="section-container">
+        <section class="section-left">
+            <h2>BLOK PIERWSZY</h2>
+            <div>
+                <span>
+                    <input type="radio" name="text-choice" value="1" checked/>
+                    <label for="1">Opcja pierwsza</label>
+                </span>
+                
+                <span>
+                    <input type="radio" name="text-choice" value="2"/>
+                    <label for="2">Opcja pierwsza</label>
+                </span>
+           
+                <span>
+                    <input type="radio" name="text-choice" value="random"/>
+                    <label for="random">Opcja losowa</label>
+                </span>
+                
 
-    <section class="section-left">
+            </div>
+        </section>
+        <section class="section-mid">
+            <h2>BLOK DRUGI</h2>
 
-    </section>
-    <section class="section-mid">
-
-    </section>
-    <section class="section-right">
-
-    </section>
+            <div>
+                <button>ZASTĄP</button>
+                <button>DOKLEJ</button>
+            </div>
+            
+        </section>
+        <section class="section-right">
+            <h2>BLOK Z DŁUGĄ NAZWĄ KTÓRA SAMA SIĘ PRZYTNIE BO TA NAZWA JEST BARDZO DŁUGA I SIĘ NIE ZMIEŚCI NA STRONCE ŁADNIE</h2>
+            <div></div>
+        </section>
+    </div>
+    
 </main>
 <footer>
-  <p>CSS IS AWESOME:3</p>
-  <p>nabthat</p>
-  <button>POKAŻ</button>
+    <div class="css-logo-wrapper">
+        <div class="css-logo-border"></div>
+        <p class="css-logo">CSS <br>IS <br>AWESOME</p>
+    </div>
+    <p class="nabthat-logo">nabthat</p>
+    <button (click)="toggleDisplayName()">POKAŻ</button>
 </footer>
