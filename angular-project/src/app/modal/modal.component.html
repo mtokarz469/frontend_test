@@ -1,0 +1,11 @@
+<div class="items-container">
+    <div class="item-block" *ngFor="let item of data; index as i">
+        <input type="text" name="item-{{i}}" [(ngModel)]="data[i]"/>
+        <button (click)="removeItem(i)">DELETE</button>
+        <button (click)="editItem(i)">EDIT</button>
+
+
+    </div>
+
+</div>
+

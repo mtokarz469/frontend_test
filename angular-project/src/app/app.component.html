@@ -8,6 +8,8 @@
         
     </div>
 </header>
+<button (click)="toggleModal()">SHOW LOCAL STORAGE</button>
+<app-modal *ngIf="visibleModal"></app-modal>
 <main>
     <h1> Nagłówek H1 <hr></h1>
     <div class="section-container">
@@ -64,7 +66,7 @@
         <input type="checkbox" id="fortnite"/>
         <div class="sigma"></div>
         <ul>
-            <li>
+            <li (click)="reset()">
                 ZRESETUJ USTAWIENIA
             </li>
             <li (click)="toggleDisplayName()">

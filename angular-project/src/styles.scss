@@ -248,6 +248,7 @@ main {
     justify-content: center;
     min-width: 0;
     margin-bottom: 10rem;
+    padding: 0 2rem;
 
     h1 {
         font-weight: normal;
@@ -262,9 +263,10 @@ main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-top: 6rem;
         section {
-            width: 33vw;
+            width: 30vw;
             align-items: center;
             text-align: center;
 
