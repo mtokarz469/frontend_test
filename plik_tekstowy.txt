@@ -1,0 +1,17 @@
+- JSowy framework (angular:3)
+
+- brak plikow graifycznych
+
+- CSS IS AWESOME sie kreci
+
+- mobile first na koncu
+
+- sortowanie alfabteyczne
+
+- dialog w przypadku problemu z wklejeniem
+
+- button w footerze bez uzycia jsa
+
+-  localstorage
+
+:3
